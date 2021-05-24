@@ -14,6 +14,7 @@
         main > .container {
             padding: 60px 15px 0;
         }
+
         .spinner-border {
             width: 24px;
             height: 24px;
@@ -21,6 +22,7 @@
             display: none;
             margin-left: 7px;
         }
+
         .txt-loading {
             opacity: 0;
         }
@@ -31,7 +33,7 @@
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Fixed navbar</a>
+            <a class="navbar-brand text-danger" href="#">CK</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -39,19 +41,12 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">Link 1</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link" href="#">Link 2</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
@@ -65,7 +60,7 @@
             <form class="text-muted pt-3 col-md-6" id="form-file">
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="url" class="form-label" >POST Url</label>
+                        <label for="url" class="form-label">POST Url</label>
                         <input type="text" class="form-control" id="url" name="url" required>
                     </div>
                     <div class="col-md-12 mt-2">
@@ -127,7 +122,10 @@
         })
             .done(function (res) {
                 console.log(res);
-                const data = {"data":{"questions":["How did the OrB compare its performance against?","How can you redefine loadstring with?","What is a more economic alternative to using one list for the x coordinates?","What is one way to avoid testing what we are inserting into a table?","What is a first alternative to change the records?","How can the array size be?","What is the name of the garbage collector in Lua?","What was the need for extra C libraries?","How is the internal format interpreted?","How many elements does a table need?","What can give you the best values?","What is the name of the variable that is local to an enclosing?","What is a good example of a compiler that is quite efficient?"]},"status":{"code":200,"message":null}};
+                const data = {
+                    "data": {"questions": ["How did the OrB compare its performance against?", "How can you redefine loadstring with?", "What is a more economic alternative to using one list for the x coordinates?", "What is one way to avoid testing what we are inserting into a table?", "What is a first alternative to change the records?", "How can the array size be?", "What is the name of the garbage collector in Lua?", "What was the need for extra C libraries?", "How is the internal format interpreted?", "How many elements does a table need?", "What can give you the best values?", "What is the name of the variable that is local to an enclosing?", "What is a good example of a compiler that is quite efficient?"]},
+                    "status": {"code": 200, "message": null}
+                };
                 toggleSuccessData(data);
             })
             .fail(function (err) {
